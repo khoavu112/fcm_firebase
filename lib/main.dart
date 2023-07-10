@@ -73,7 +73,6 @@ class _HomePageState extends State<HomePage> {
         child: ElevatedButton(
           onPressed: () {
             // Gọi sự kiện gửi Notification
-            notifController.localNotification();
           },
           child: Icon(Icons.circle_notifications),
         ),

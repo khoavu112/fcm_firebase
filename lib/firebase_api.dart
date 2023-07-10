@@ -104,25 +104,6 @@ class NotificationController {
   @pragma('vm:entry-point')
   static Future<void> onNotificationDisplayedMethod(
       ReceivedAction receivedAction) async {
-    await AwesomeNotifications().createNotification(
-      content: NotificationContent(
-        id: 1,
-        channelKey: 'alerts',
-        title: 'This is Notification',
-        // Thêm cái hình vào nhìn cho vui mắt :v
-        body: 'This is Local Notification',
-        hideLargeIconOnExpand: true,
-        largeIcon:
-            'https://images.pexels.com/photos/14679216/pexels-photo-14679216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        bigPicture:
-            'https://images.pexels.com/photos/14679216/pexels-photo-14679216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        notificationLayout: NotificationLayout.BigPicture,
-      ),
-      actionButtons: <NotificationActionButton>[
-        NotificationActionButton(key: 'yes', label: 'Yes'),
-        NotificationActionButton(key: 'no', label: 'No'),
-      ],
-    );
     print('press');
   }
 
@@ -145,27 +126,6 @@ class NotificationController {
   }
 
   // Hàm gọi Local notification khi nhấn nút Send notification trên ứng dụng
-  Future<void> localNotification() async {
-    await AwesomeNotifications().createNotification(
-      content: NotificationContent(
-        id: 1,
-        channelKey: 'alerts',
-        title: 'This is Notification',
-        // Thêm cái hình vào nhìn cho vui mắt :v
-        body: 'This is Local Notification',
-        hideLargeIconOnExpand: true,
-        largeIcon:
-            'https://images.pexels.com/photos/14679216/pexels-photo-14679216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        bigPicture:
-            'https://images.pexels.com/photos/14679216/pexels-photo-14679216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        notificationLayout: NotificationLayout.BigPicture,
-      ),
-      actionButtons: <NotificationActionButton>[
-        NotificationActionButton(key: 'yes', label: 'Yes'),
-        NotificationActionButton(key: 'no', label: 'No'),
-      ],
-    );
-  }
 
   /// Use this method to execute on background when a silent data arrives
   /// (even while terminated)
